@@ -95,6 +95,12 @@ module.exports = function(environment) {
         permission: 'create_content'
       },
       {
+        icon: '<i class="fa fa-book" aria-hidden="true"></i>',
+        text: 'Páginas',
+        linkTo: 'rg-publications.index',
+        permission: 'create_rg-publication'
+      },
+      {
         icon: '<i class="fa fa-slideshare"></i>',
         text: 'Slideshow',
         linkTo: 'slides.index',

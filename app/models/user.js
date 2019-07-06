@@ -9,11 +9,11 @@ export default DS.Model.extend({
   username: DS.attr('string'),
   displayName: DS.attr('string'),
   fullName: DS.attr('string'),
-  funcao: DS.attr('string'),
   biography: DS.attr('string'),
   gender: DS.attr('string'),
   email: DS.attr('string'),
   active: DS.attr('boolean'),
+  blocked: DS.attr('boolean'),
   language: DS.attr('string', {
     defaultValue: 'pt-br'
   }),
@@ -27,6 +27,7 @@ export default DS.Model.extend({
   organization: DS.attr(),
   linkPermanent: DS.attr(),
   metadata: DS.attr(),
+  setAlias: DS.attr(),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date')
 });

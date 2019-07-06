@@ -2,13 +2,10 @@ import DS from 'ember-data';
 import Inflector from 'ember-inflector';
 
 const inflector = Inflector.inflector;
-inflector.irregular('content', 'content');
-inflector.uncountable('content');
+inflector.irregular('rg-publication', 'rg-publication');
+inflector.uncountable('rg-publication');
 
 export default DS.Model.extend({
-  active: DS.attr('boolean', {
-    defaultValue: 'true'
-  }),
   published: DS.attr('boolean'),
   highlighted: DS.attr('number'),
   showInLists: DS.attr('boolean', {
@@ -33,9 +30,6 @@ export default DS.Model.extend({
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
   creator: DS.belongsTo('user', {
-    async: true
-  }),
-  cats: DS.hasMany('term', {
     async: true
   })
 });
